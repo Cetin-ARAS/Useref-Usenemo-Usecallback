@@ -1,17 +1,16 @@
-import React, { memo } from "react";
-import cw from "../assets/cw_logo.png";
+import React, { memo } from 'react';
+import cw from '../assets/cw_logo.png';
 
-//! React.memo, componentleri hafızaya almak için kullanılır, render'ı önler 👇
+//* React.memo componentleri hafızaya almak için kullanılır, render'ı önler
 
-//* 3. Kullanım --> export kısmında componenti "memo" ile sarmallıyoruz 👇
 const Header = ({ img }) => {
-  console.log("Rendering: Header Comp.");
+  console.log('Rendering: Header Comp.');
   return (
     <div className="header">
       <img
         src={img ? img : cw}
         alt="cw_logo"
-        style={{ margin: "1rem", maxHeight: "200px" }}
+        style={{ margin: '1rem', maxHeight: '200px' }}
       />
     </div>
   );
@@ -19,15 +18,16 @@ const Header = ({ img }) => {
 
 export default memo(Header);
 
-//* 2.Kullanım --> "memo" yu import kısmında destructure ederek burada React. demeden direk memo diyerek başlayabiliyoruz
+//* 2.kullanım
 // const Header = memo(({ img }) => {
-//   console.log("Rendering: Header Comp.");
+
+//   console.log('Rendering: Header Comp.');
 //   return (
 //     <div className="header">
 //       <img
 //         src={img ? img : cw}
 //         alt="cw_logo"
-//         style={{ margin: "1rem", maxHeight: "200px" }}
+//         style={{ margin: '1rem', maxHeight: '200px' }}
 //       />
 //     </div>
 //   );
@@ -35,15 +35,16 @@ export default memo(Header);
 
 // export default Header;
 
-//* 1.Kullanım
+//* 1.kullanım
 // const Header = React.memo(({ img }) => {
-//   console.log("Rendering: Header Comp.");
+
+//   console.log('Rendering: Header Comp.');
 //   return (
 //     <div className="header">
 //       <img
 //         src={img ? img : cw}
 //         alt="cw_logo"
-//         style={{ margin: "1rem", maxHeight: "200px" }}
+//         style={{ margin: '1rem', maxHeight: '200px' }}
 //       />
 //     </div>
 //   );
