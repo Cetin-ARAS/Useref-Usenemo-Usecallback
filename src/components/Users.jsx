@@ -1,8 +1,10 @@
 import React from 'react'
 
 const Users = () => {
+console.log("Users Component Rendered")
+
   return (
-    <div>Users</div>
+    <div>i</div>
   )
 }
 
